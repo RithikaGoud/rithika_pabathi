@@ -84,13 +84,13 @@ tr:nth-child(odd) {
       </tr>
     </thead>
     <tbody>
-      {% for task in task_list %}
+      {% for task in page_list %}
       <tr>
         <td>
-          <a class="btn btn-info btn-sm margin" href="{% url 'task_detail' task.pk %}" >
+          <a class="btn btn-info btn-sm margin" href="{% url 'page_detail' task.pk %}" >
             <span class="action-icons edit-icon" title="Edit">&#9998;</span>
           </a>
-          <a class="icon-link margin" href="{% url 'task_confirm_list' task.pk %}">
+          <a class="icon-link margin" href="{% url 'page_confirm_list' task.pk %}">
                 <span class="action-icons bin-icon" title="Delete">&#128465;</span>
           </a>
           {{ task.name }}
